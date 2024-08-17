@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Téléchargeur de Vidéos YouTube MP4</title>
+    <style>
+        body {
+            background-color: #181818; /* Fond noir/gris */
+            color: #fff; /* Texte blanc */
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #282828; /* Fond gris plus clair */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            color: #FF0000; /* Rouge YouTube */
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        input[type="text"], input[type="submit"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 2px solid #3e3e3e;
+            border-radius: 5px;
+            background-color: #121212; /* Input gris foncé */
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        input[type="submit"] {
+            background-color: #FF0000; /* Rouge YouTube */
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #e60000; /* Rouge foncé pour effet hover */
+        }
+
+        .info-box {
+            background-color: #333; /* Gris foncé pour la boîte d'information */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            margin-top: 20px;
+            color: #ccc;
+            text-align: left;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #bbb;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Téléchargeur YouTube MP4</h1>
+        <form method="post">
+            <label for="url">URL de la vidéo YouTube :</label>
+            <input type="text" id="url" name="url" required placeholder="Entrez l'URL ici...">
+
+            <label for="save_path">Chemin du dossier de sauvegarde :</label>
+            <input type="text" id="save_path" name="save_path" required placeholder="Entrez le chemin du dossier...">
+
+            <input type="submit" value="Télécharger">
+        </form>
+        <div class="info-box">
+            <h2>Informations Importantes</h2>
+            <p>Veuillez noter que le téléchargement peut prendre un certain temps, car nous téléchargeons la vidéo dans la meilleure qualité possible. La qualité supérieure peut augmenter le temps de traitement en fonction de la taille du fichier.</p>
+        </div>
+        <div class="footer">
+            <p>Assurez-vous de respecter les droits d'auteur avant de télécharger une vidéo.</p>
+        </div>
+    </div>
+</body>
+</html>
