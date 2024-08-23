@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Téléchargement Terminé</title>
+    <style>
+        body {
+            background-color: #181818; /* Fond noir/gris */
+            color: #fff; /* Texte blanc */
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #282828; /* Fond gris plus clair */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            color: #FF0000; /* Rouge YouTube */
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        a {
+            color: #FF0000; /* Rouge YouTube */
+            text-decoration: none;
+            font-size: 1.1em;
+            padding: 10px 20px;
+            border: 2px solid #FF0000;
+            border-radius: 5px;
+            background-color: #282828; /* Fond gris plus clair */
+        }
+
+        a:hover {
+            background-color: #FF0000; /* Rouge YouTube sur hover */
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Téléchargement Terminé !</h1>
+        <p>La vidéo a été téléchargée avec succès.</p>
+        <a href="{{ url_for('index') }}">Retour au menu</a>
+    </div>
+</body>
+</html>
