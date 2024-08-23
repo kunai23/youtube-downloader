@@ -2,6 +2,8 @@ from flask import Flask, request, render_template, redirect, url_for, flash
 import yt_dlp
 import os
 import secrets
+import psutil
+
 
 app = Flask(__name__)
 
@@ -25,6 +27,13 @@ def index():
             flash(f'Une erreur est survenue : {e}')
             return redirect(url_for('index'))
     return render_template('index.html')
+
+@app.route("/resource_usage")
+def resource_usage():
+    memory_info = psutil.virtual_memory()
+    cpu_percent = psutil.cpu_percent(interval=1)
+    return f"Memory usage: {memory_info.percent}%<br>CPU usage: {cpu_percent}%"
+
 
 @app.route('/completed')
 def completed():
