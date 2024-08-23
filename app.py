@@ -6,7 +6,7 @@ import secrets
 app = Flask(__name__)
 
 # Génération d'une clé secrète aléatoire
-app.secret_key = secrets.token_hex(16)  # Clé secrète pour signer les cookies et les sessions
+app.secret_key = os.getenv('SECRET_KEY', secrets.token_hex(16))
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
